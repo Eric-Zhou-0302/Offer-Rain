@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo.png" width="200" alt="eric's-logo" />
+  <img src="assets/offer-rain-logo.png" width="200" alt="logo" />
   <h1>📮 Offer-Rain: 把 JD 发给 Agent，让他帮你投递简历。</h1>
   <p><strong>等待你的 Offer 雨吧！</strong></p>
   <p>
@@ -30,6 +30,8 @@
 
 ## 安装
 
+### Prompt
+
 复制这段话，让你的 OpenClaw / Claude Code / Codex ... 安装：
 
 ```
@@ -37,7 +39,15 @@
 https://github.com/Eric-Zhou-0302/Offer-Rain
 ```
 
-当然，你也可以手动安装这个项目至你的技能目录：
+### OpenClaw
+
+```bash
+openclaw skills install @eric-zhou-0302/offer-rain
+```
+
+> Offer-Rain Skill 已发布至 [ClawHub](https://clawhub.ai/eric-zhou-0302/skills/offer-rain)
+
+### 手动安装
 
 ```bash
 git clone https://github.com/Eric-Zhou-0302/Offer-Rain.git
