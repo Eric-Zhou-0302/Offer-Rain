@@ -14,6 +14,9 @@
   <a href="https://opensource.org/licenses/MIT">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&labelColor=555" />
   </a>
+  <a href="https://github.com/Eric-Zhou-0302/JSON-Resume" title="打开 JSON-Resume">
+    <img alt="JSON-Resume × Offer-Rain 工作流" src="https://img.shields.io/badge/Workflow-JSON--Resume%20%C3%97%20Offer--Rain-6E56CF?style=for-the-badge&labelColor=555" />
+  </a>
 </p>
 
 </div>
@@ -170,6 +173,12 @@ A: 不可以，仅支持 163 邮箱。*顺便提一句，还是不要用你的QQ
 **Q: 邮件发错了能撤回吗？**
 
 A: Agent 不能帮你撤回，但是你可以到邮箱客户端手动撤回。
+
+---
+
+## 搭配 JSON-Resume
+
+Offer-Rain 专注于投递，不生成或改写简历。若你还没有一份针对目标 JD 定制的 PDF 简历，可先使用 [JSON-Resume](https://github.com/Eric-Zhou-0302/JSON-Resume)：由 Agent 基于你的经历材料和 JD 生成并验收简历，再将生成的 PDF 作为 `attachment_path` 交给 Offer-Rain 投递。
 
 ---
 
