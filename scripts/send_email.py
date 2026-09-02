@@ -63,6 +63,18 @@ def sanitize_attachment_name(name):
     return cleaned[:255] if len(cleaned) > 255 else cleaned
 
 
+def validate_attachment_name_extension(attachment_path, display_name):
+    """确保附件展示名与实际文件的扩展名一致。"""
+    source_suffix = Path(attachment_path).suffix.casefold()
+    display_suffix = Path(display_name).suffix.casefold()
+    if source_suffix != display_suffix:
+        raise ValueError(
+            "附件命名扩展名与实际文件不一致："
+            f"实际文件为 {source_suffix or '无扩展名'}，"
+            f"附件命名为 {display_suffix or '无扩展名'}"
+        )
+
+
 # CLI 覆盖 JSON：CLI 显式传入的字段优先级更高
 def merge_config(json_config, cli_args):
     """CLI 显式传入的字段覆盖 JSON 中同名字段。"""
@@ -100,6 +112,7 @@ def create_email(sender, receiver, subject, body, attachment_path, attachment_na
     display_name = sanitize_attachment_name(
         attachment_name or Path(attachment_path).name
     )
+    validate_attachment_name_extension(attachment_path, display_name)
 
     attachment = MIMEBase(maintype, subtype)
     attachment.set_payload(file_data)
